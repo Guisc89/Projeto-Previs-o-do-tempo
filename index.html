@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Será que chove hoje?</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Veja a previsão do tempo completa e atualizada. Descubra como estará o clima hoje." />
+    <meta name="author" content="Guilherme Cardoso" />
+</head>
+<body>
+  <div class="fundo">
+    <div class="container">
+        <header>
+            <h1>Será que chove hoje?</h1>
+        <h4>Digite sua localização para saber a previsão do tempo para hoje</h4>
+        </header>
+
+<!-- aqui a pessoa vai fazer a busca pela sua localidade --> 
+     <div class="location-input">
+        <label for="location-input">Digite sua localização:</label>
+        <input type="text" id="location-input" placeholder="Cidade, Estado" required />
+        <button id="search-button">Buscar</button>
+     </div>
+    </div>
+  </div>  
+  <div class="footer">
+   <footer>
+    <br>
+        <p>Desenvolvido por Guilherme Cardoso</p>
+        <p>Projeto de previsão do tempo utilizando a API OpenWeatherMap</p>
+   </footer>
+  </div>
+</body>
+</html>

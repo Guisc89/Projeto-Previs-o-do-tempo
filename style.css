@@ -1,0 +1,63 @@
+/* style.css */
+   
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Essa linha coloca o elemento .fundo atrás de todo o outro conteúdo */
+
+    background-image: url("a-city-at-night-with-the-lights-on-in-the-backgrou-2025-02-09-01-27-23-utc.jpg");
+
+    /* Estas propriedades fazem a imagem de fundo se ajustar e centralizar bem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 80px;
+    margin-block-end: 5%; /* Margem para centralizar o conteúdo */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: rgb(23, 54, 88);
+    background-color: rgba(255, 255, 255, 0.884); /* Fundo azul com transparência */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+}
+.location-input {
+    margin-top: 20px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(23, 54, 88);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: rgb(15, 36, 59);
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}

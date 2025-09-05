@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <title>Será que chove hoje?</title>
+    <title>Previsão do tempo</title>  
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Veja a previsão do tempo completa e atualizada. Descubra como estará o clima hoje." />
     <meta name="author" content="Guilherme Cardoso" />
@@ -14,15 +14,15 @@
     <div class="container">
         <header>
             <h1>Será que chove hoje?</h1>
-        <h4>Digite sua localização para saber a previsão do tempo para hoje</h4>
+        <h3>Digite sua localização para saber a previsão do tempo para hoje</h3>
         </header>
 
 <!-- aqui a pessoa vai fazer a busca pela sua localidade --> 
-     <div class="location-input">
+     <form class="location">
         <label for="location-input">Digite sua localização:</label>
-        <input type="text" id="location-input" placeholder="Cidade, Estado" required />
+        <input type="text" id="location" placeholder="Cidade, Estado" required />
         <button id="search-button">Buscar</button>
-     </div>
+     </form>
     </div>
   </div>  
   <div class="footer">

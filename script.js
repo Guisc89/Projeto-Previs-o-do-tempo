@@ -36,10 +36,9 @@ function showWeather(data) {
 
     weatherInfo.innerHTML = `
         <h3>Clima em ${data.name}</h3>
-        <p><strong>Temperatura:</strong> ${data.main.temp}°C</p>
-        <p><strong>Sensação térmica:</strong> ${data.main.feels_like}°C</p>
         <p><strong>Condição:</strong> ${data.weather[0].description}</p>
-        <p><strong>Umidade:</strong> ${data.main.humidity}%</p>
+        <p><strong>Temperatura:</strong> ${data.main.temp}°C</p>
+        
     `;
 
     // Remove resultados anteriores e insere o novo

@@ -24,8 +24,8 @@
     margin-block-end: 5%; /* Margem para centralizar o conteúdo */
     text-align: center;
     font-family: Arial, sans-serif;
-    color: rgb(23, 54, 88);
-    background-color: rgba(255, 255, 255, 0.884); /* Fundo azul com transparência */
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.822); /* Fundo azul com transparência */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
 }
@@ -37,6 +37,13 @@
     justify-content: center;
     animation-duration: initial;
     align-items: center;
+}
+#location {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 12px;
 }
 
 #search-button {

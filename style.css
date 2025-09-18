@@ -17,36 +17,39 @@
 }
 
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 5%;
-    padding: 80px;
-    margin-block-end: 5%; /* Margem para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 50vw; /* Ocupa metade da largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin-left: auto; /* Alinha tudo na direita */
     text-align: center;
     font-family: Arial, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.822); /* Fundo azul com transparência */
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.822); /* Fundo azul com transparência */    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
 }
 .location {
-    margin-top: 20px;
+    margin-top: 10px;    
     line-height: 2;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    animation-duration: initial;
-    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: auto;
 }
+
 #location {
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 10px;
     border-radius: 15px;
     border: none;
     font-size: 12px;
+    width: 300px;
 }
 
 #search-button {
+    margin-top: 10px;
     margin-left: 10px;
     padding: 10px;
     background-color: rgb(23, 54, 88);
@@ -69,7 +72,23 @@
     background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 90vw; /* Ocupa 90% da largura da tela */
+        height: 90vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px; /* Reduz o padding para telas pequenas */
+    }
+    #location {
+        width: 80vw; /* Input ocupa quase toda a largura */
+    }
 }

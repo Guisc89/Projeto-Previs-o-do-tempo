@@ -29,7 +29,9 @@
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.822); /* Fundo azul com transparência */    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+    
 }
+
 .location {
     margin-top: 10px;    
     line-height: 2;
@@ -65,24 +67,12 @@
 
 .image-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;    /* Tamanho reduzido */
-    height: 80px;   /* Tamanho reduzido */
+    padding-top: 10%;
+    padding-left: 2%;
+    width: 50rem;    
+    height: 30rem;   
     object-fit: cover;
-    margin-top: 20px;
     z-index: 1; /* Garante que a imagem fique acima do fundo, mas abaixo do conteúdo principal */
-}
-
-
-.image-container img {
-    display: flex;
-    padding-top: 600px;
-    margin-left: 700px;
-    width: 40rem;
-    height:20rem
-    object-fit: cover;
-
 }
 
 .footer {

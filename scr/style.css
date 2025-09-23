@@ -71,10 +71,8 @@
 
 .image-container {
     display: flex;
-    padding-top: 10%;
-    padding-left: 2%;
-    width: 50rem;    
-    height: 30rem;   
+    padding-left: 3%;
+    height: 60rem;   
     pointer-events: none;
     position: absolute; /* não deixa empurrar os outros elementos */
     top: 0;

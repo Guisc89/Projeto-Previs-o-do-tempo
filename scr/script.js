@@ -15,59 +15,31 @@ document.querySelector(".location").addEventListener("submit", function(e) {
 
 async function getWeather(city) {
     try {
-        // Busca dados da cidade para obter latitude e longitude
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br&units=metric`
-        );
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br&units=metric`
+);
 
         if (!response.ok) {
             throw new Error("Cidade não encontrada");
         }
 
         const data = await response.json();
-        const { lat, lon } = data.coord;
-
-        // Busca previsão diária usando latitude e longitude
-        const dailyResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${apiKey}&lang=pt_br&units=metric`
-        );
-        if (!dailyResponse.ok) {
-            throw new Error("Erro ao buscar previsão diária");
-        }
-        const dailyData = await dailyResponse.json();
-
-        showWeather(data, dailyData);
+        showWeather(data);
     } catch (error) {
         alert(error.message);
     }
 }
 
-function showWeather(data, dailyData) {
+function showWeather(data) {
     const weatherInfo = document.createElement("div");
     weatherInfo.classList.add("weather-info");
 
-    // Log para depuração
-    console.log("dailyData:", dailyData);
-
-    // Verifica se daily existe e tem pelo menos dois elementos
-    if (!dailyData.daily || dailyData.daily.length < 2) {
-        weatherInfo.innerHTML = `
-            <h3>Clima em ${data.name}</h3>
-            <p>Não foi possível obter a previsão para amanhã.</p>
-        `;
-    } else {
-        const current = dailyData.current;
-        const tomorrow = dailyData.daily[1];
-
-        weatherInfo.innerHTML = `
-            <h3>Clima em ${data.name}</h3>
-            <p><strong>Condição agora:</strong> ${current.weather[0].description}</p>
-            <p><strong>Temperatura:</strong> ${current.temp}°C</p>
-            <p><strong>Condição amanhã:</strong> ${tomorrow.weather[0].description}</p>
-            <p><strong>Min:</strong> ${tomorrow.temp.min}°C,</p>
-            <p><strong>Max:</strong> ${tomorrow.temp.max}°C</p>
-        `;
-    }
+    weatherInfo.innerHTML = `
+        <h3>Clima em ${data.name}</h3>
+        <p><strong>Condição:</strong> ${data.weather[0].description}</p>
+        <p><strong>Temperatura:</strong> ${data.main.temp}°C</p>
+        
+    `;
 
     // Remove resultados anteriores e insere o novo
     const container = document.querySelector(".container");

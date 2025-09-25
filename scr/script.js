@@ -40,11 +40,19 @@ function showWeather(data) {
         <p><strong>Temperatura:</strong> ${data.main.temp}°C</p>
         
     `;
-
+ 
     // Remove resultados anteriores e insere o novo
     const container = document.querySelector(".container");
     const oldInfo = document.querySelector(".weather-info");
     if (oldInfo) oldInfo.remove();
     container.appendChild(weatherInfo);
-}
+};  
+    
+
+ //aqui ele vai puxar a cidade no mapa
+document.getElementById("buscarcidade").addEventListener("click", function() {
+    const cidade = "Porto Alegre"; // Defina a cidade desejada
+    getWeather(cidade);
+});
+
 

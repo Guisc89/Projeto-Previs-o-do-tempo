@@ -79,6 +79,19 @@
     left: 0;
 }
 
+#buscarcidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 41rem;
+    margin-left: 26rem;
+    position: absolute; /* deixa o botão em cima da imagem */
+}
+
+#buscarcidade:hover {
+    background-color: rgb(15, 36, 59); /*--------ajustar aqui, evento de clique no botão */
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -109,4 +122,16 @@
     #location {
         width: 80vw; /* Input ocupa quase toda a largura */
     }
+}
+    
+@media (max-width: 1450px) {
+     .image-container {
+        display: none; /* Esconde a imagem em telas menores */
+ }
+}
+
+@media (max-width: 1450px) {
+     #buscarcidade {
+        display: none; /* Esconde o botão em telas menores */
+ }
 }

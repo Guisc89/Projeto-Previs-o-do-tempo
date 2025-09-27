@@ -71,25 +71,31 @@
 
 .image-container {
     display: flex;
-    padding-left: 3%;
+    padding-left: 5%;
     height: 60rem;   
     pointer-events: none;
     position: absolute; /* não deixa empurrar os outros elementos */
-    top: 0;
-    left: 0;
+    top: -8rem;
+    left: 1rem;
+    z-index: 1; /* deixa a imagem atrás do botão */
 }
 
 #buscarcidade {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 41rem;
-    margin-left: 26rem;
+    margin-top: 34rem;
+    margin-left: 21rem;
+    opacity: 0.0; /* deixa o botão transparente */
+    background-color: rgb(255, 255, 255);
     position: absolute; /* deixa o botão em cima da imagem */
+    z-index: 2; /* deixa o botão na frente da imagem */
+    border: none;
 }
 
 #buscarcidade:hover {
-    background-color: rgb(15, 36, 59); /*--------ajustar aqui, evento de clique no botão */
+    cursor: pointer;
+    background-color: rgb(189, 189, 189); /*--------ajustar aqui, evento de clique no botão */
 }
 
 .footer {
